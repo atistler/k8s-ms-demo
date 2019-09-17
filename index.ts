@@ -1,7 +1,10 @@
 import * as eks from "@pulumi/eks";
 import * as k8s from "@pulumi/kubernetes";
 import * as awsx from "@pulumi/awsx";
-import {Dex, Harbor, PrometheusOperator} from './managed-services';
+import {
+    Dex, ExternalDns,
+    Harbor, PrometheusOperator, CertManager
+} from './managed-services';
 
 // Create VPC
 const vpc = new awsx.ec2.Vpc("k8s-ms-demo", {
@@ -27,6 +30,8 @@ const namespace = new k8s.core.v1.Namespace('rax-managed', {
     }
 }, {provider: cluster.provider});
 
+
+const externalDns = new ExternalDns(cluster, namespace);
 const dex = new Dex(cluster, namespace);
 const harbor = new Harbor(cluster, namespace, {
     expose: {
@@ -37,6 +42,8 @@ const harbor = new Harbor(cluster, namespace, {
     }
 });
 const prometheusOperator = new PrometheusOperator(cluster, namespace);
+const certManager = new CertManager(cluster, namespace);
+
 
 // Export the cluster's kubeconfig.
 export const kubeconfig = cluster.kubeconfig;
