@@ -1,5 +1,4 @@
 {
-  "name": "kubernetes-typescript",
   "devDependencies": {
     "@types/chai": "^4.2.3",
     "@types/mocha": "^5.2.7",
@@ -20,5 +19,11 @@
     "js-yaml": "^3.13.1",
     "lerna": "^3.16.4",
     "lodash": "^4.17.15"
-  }
+  },
+  "licenses": [
+    {
+      "type": "Apache",
+      "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+    }
+  ]
 }
