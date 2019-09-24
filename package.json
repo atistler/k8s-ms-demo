@@ -4,6 +4,8 @@
     "@types/mocha": "^5.2.7",
     "@types/node": "latest",
     "chai": "^4.2.0",
+    "commitizen": "^4.0.3",
+    "cz-conventional-changelog": "3.0.2",
     "lerna": "^3.16.4",
     "mocha": "^6.2.0"
   },
@@ -16,8 +18,12 @@
     "@types/lodash": "^4.14.138",
     "axios": "^0.19.0",
     "fast-json-patch": "^3.0.0-1",
+    "husky": "^3.0.5",
     "js-yaml": "^3.13.1",
     "lodash": "^4.17.15"
+  },
+  "scripts": {
+    "commit": "npx git-cz"
   },
   "licenses": [
     {
@@ -25,5 +31,10 @@
       "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
     }
   ],
-  "version": "0.0.0"
+  "version": "0.0.0",
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
 }
