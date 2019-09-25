@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.4.3](https://github.com/atistler/k8s-ms-modules-demo/compare/@k8s-ms-modules-demo/eks@0.4.2...@k8s-ms-modules-demo/eks@0.4.3) (2019-09-25)
+
+
+### Bug Fixes
+
+* **publish:** publishing node_modules broken ([d1d4956](https://github.com/atistler/k8s-ms-modules-demo/commit/d1d4956))
+
+
+
+
+
 ## [0.4.2](https://github.com/atistler/k8s-ms-modules-demo/compare/@k8s-ms-modules-demo/eks@0.4.1...@k8s-ms-modules-demo/eks@0.4.2) (2019-09-25)
 
 
