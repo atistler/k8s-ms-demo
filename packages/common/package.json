@@ -3,8 +3,8 @@
   "version": "1.0.1",
   "description": "Now I’m the model of a modern major general / The venerated Virginian veteran whose men are all / Lining up, to put me up on a pedestal / Writin’ letters to relatives / Embellishin’ my elegance and eloquence / But the elephant is in the room / The truth is in ya face when ya hear the British cannons go / BOOM",
   "keywords": [],
-  "author": "Adam Tistler <atistler@datapipe.com>",
-  "license": "ISC",
+  "author": "Adam Tistler <adam.tistler@rackspace.com>",
+  "license": "UNLICENSED",
   "main": "lib/index.ts",
   "directories": {
     "lib": "lib",
@@ -26,5 +26,6 @@
   "bugs": {
     "url": "https://github.com/atistler/k8s-ms-modules-demo/issues"
   },
-  "homepage": "https://github.com/atistler/k8s-ms-modules-demo#readme"
+  "homepage": "https://github.com/atistler/k8s-ms-modules-demo#readme",
+  "gitHead": "054bae77a897b66203f03262cca2e42ddf0f4819"
 }

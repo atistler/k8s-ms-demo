@@ -2,6 +2,6 @@
 
 const common = require('..');
 
-describe('@k8s-ms-modules/common', () => {
+describe('@k8s-ms-modules-demo/common', () => {
     it('needs tests');
 });
