@@ -11,5 +11,10 @@ usually contain a Helm chart and sometimes will contain other cloud native resou
     * [EKS](https://www.pulumi.com/docs/tutorials/kubernetes/eks/)
     * [Components](https://www.pulumi.com/docs/tutorials/aws/s3-folder-component/)
 * [Lerna](https://github.com/lerna/lerna/blob/master/README.md)
+
+> `lerna add` Adds npm dependency to all or specific package within a project
+
+> `lerna bootstrap` Install all dependency from all packages within a project
+
 * [Yarn](https://yarnpkg.com/en/docs/usage)
     * [Monorepo](https://medium.com/mitterio/multirepo-to-lerna-js-monorepo-80f6657cb443)

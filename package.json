@@ -34,15 +34,10 @@
   "version": "0.0.1",
   "scripts": {
     "lerna:bootstrap": "lerna bootstrap --use-workspaces",
-    "lerna:publish": "lerna publish",
+    "lerna:publish": "lerna run tsc && lerna publish",
     "commit": "git-cz"
   },
-  "licenses": [
-    {
-      "type": "Apache",
-      "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
-    }
-  ],
+  "license": "UNLICENSED",
   "config": {
     "commitizen": {
       "path": "cz-conventional-changelog"
