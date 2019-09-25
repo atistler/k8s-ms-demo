@@ -3,3 +3,4 @@
 .idea
 lerna-debug.log
 packages/*/lib
+packages/*/node_modules

@@ -30,6 +30,16 @@
     "access": "public"
   },
   "dependencies": {
-    "@k8s-ms-modules-demo/common": "^1.0.3"
+    "@k8s-ms-modules-demo/common": "^1.0.3",
+    "@pulumi/awsx": "^0.18.10",
+    "@pulumi/eks": "^0.18.13",
+    "@pulumi/kubernetes": "^1.0.0",
+    "@pulumi/pulumi": "^1.0.0",
+    "@types/fast-json-patch": "^1.1.5",
+    "@types/lodash": "^4.14.138",
+    "axios": "^0.19.0",
+    "fast-json-patch": "^3.0.0-1",
+    "js-yaml": "^3.13.1",
+    "lodash": "^4.17.15"
   }
 }
