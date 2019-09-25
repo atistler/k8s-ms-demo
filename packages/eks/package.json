@@ -3,9 +3,9 @@
   "version": "0.2.0",
   "description": "Managed services for AWS EKS",
   "main": "index.ts",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "author": "",
-  "gitHead": "daefdee45d5c456fb06d53cc5b075f2c4e793ad7"
+  "gitHead": "0b8e43acc0dc56d6333050d3097b3bdae25918f4",
+  "publishConfig": {
+    "access": "public"
+  }
 }
