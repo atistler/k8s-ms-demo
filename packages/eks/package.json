@@ -1,6 +1,6 @@
 {
   "name": "@k8s-ms-modules-demo/eks",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Managed services for AWS EKS",
   "main": "index.ts",
   "scripts": {
