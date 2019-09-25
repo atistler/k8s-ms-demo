@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.4.2](https://github.com/atistler/k8s-ms-modules-demo/compare/@k8s-ms-modules-demo/eks@0.4.1...@k8s-ms-modules-demo/eks@0.4.2) (2019-09-25)
+
+
+### Bug Fixes
+
+* **build:** lerna ts compilation fixes ([9042eff](https://github.com/atistler/k8s-ms-modules-demo/commit/9042eff))
+
+
+
+
+
 ## [0.4.1](https://github.com/atistler/k8s-ms-modules-demo/compare/@k8s-ms-modules-demo/eks@0.3.0...@k8s-ms-modules-demo/eks@0.4.1) (2019-09-25)
 
 
