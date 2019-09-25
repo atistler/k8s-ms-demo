@@ -36,11 +36,6 @@
     "lerna-publish": "lerna publish",
     "commit": "npx git-cz"
   },
-  "husky": {
-    "hooks": {
-      "prepare-commit-msg": "exec < /dev/tty && git cz --hook"
-    }
-  },
   "licenses": [
     {
       "type": "Apache",
