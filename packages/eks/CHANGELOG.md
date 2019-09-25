@@ -3,6 +3,27 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.4.0 (2019-09-25)
+
+
+### Bug Fixes
+
+* **external-dns:** fixed contructor to accept k8s.Provider and not cluster reference ([21bb1a0](https://github.com/atistler/k8s-ms-modules-demo/commit/21bb1a0))
+* **managed-services:** testing commit messages ([c22b5f7](https://github.com/atistler/k8s-ms-modules-demo/commit/c22b5f7))
+* **sadf:** sfd ([02e5a05](https://github.com/atistler/k8s-ms-modules-demo/commit/02e5a05))
+* **sfad:** asfd ([3910fbd](https://github.com/atistler/k8s-ms-modules-demo/commit/3910fbd))
+
+
+### Features
+
+* asdfsdf ([209b694](https://github.com/atistler/k8s-ms-modules-demo/commit/209b694))
+* **asdf:** d ([2b92a73](https://github.com/atistler/k8s-ms-modules-demo/commit/2b92a73))
+* **sdf:** asdf ([1e1a41c](https://github.com/atistler/k8s-ms-modules-demo/commit/1e1a41c))
+
+
+
+
+
 # [0.3.0](https://github.com/atistler/k8s-ms-modules-demo/compare/@k8s-ms-modules-demo/eks@0.2.0...@k8s-ms-modules-demo/eks@0.3.0) (2019-09-25)
 
 

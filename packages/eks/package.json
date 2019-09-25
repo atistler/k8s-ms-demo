@@ -1,6 +1,6 @@
 {
   "name": "@k8s-ms-modules/eks",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "Managed services for AWS EKS",
   "keywords": [],
   "author": "Adam Tistler <atistler@datapipe.com>",
@@ -29,6 +29,6 @@
     "access": "public"
   },
   "dependencies": {
-    "@k8s-ms-modules-demo/common": "^1.0.0"
+    "@k8s-ms-modules-demo/common": "^1.0.1"
   }
 }
