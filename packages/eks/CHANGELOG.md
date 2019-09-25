@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.4.1](https://github.com/atistler/k8s-ms-modules-demo/compare/@k8s-ms-modules-demo/eks@0.3.0...@k8s-ms-modules-demo/eks@0.4.1) (2019-09-25)
+
+
+### Bug Fixes
+
+* **external-dns:** fixed contructor to accept k8s.Provider and not cluster reference ([21bb1a0](https://github.com/atistler/k8s-ms-modules-demo/commit/21bb1a0))
+* **package:** fixes licences and package references ([0eba462](https://github.com/atistler/k8s-ms-modules-demo/commit/0eba462))
+
+
+
+
+
 # 0.4.0 (2019-09-25)
 
 
