@@ -34,7 +34,7 @@
   "scripts": {
     "bootstrap": "lerna bootstrap --use-workspaces",
     "lerna-publish": "lerna publish",
-    "commit": "npx git-cz"
+    "commit": "git-cz"
   },
   "licenses": [
     {
@@ -45,7 +45,7 @@
   "version": "0.0.0",
   "config": {
     "commitizen": {
-      "path": "./node_modules/cz-conventional-changelog"
+      "path": "cz-conventional-changelog"
     }
   }
 }
