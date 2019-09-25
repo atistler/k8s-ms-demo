@@ -1,10 +1,8 @@
 import * as _ from 'lodash';
-import * as base from '../external-dns';
+import * as base from '@k8s-ms-modules-demo/common';
 import * as eks from '@pulumi/eks';
 import * as aws from '@pulumi/aws';
 import * as k8s from '@pulumi/kubernetes';
-import * as pulumi from '@pulumi/pulumi';
-import {ChartOptions} from "../../lib/chart-adapter";
 import {ComponentResourceOptions} from "@pulumi/pulumi";
 
 class ExternalDnsChart extends base.ExternalDnsChart {
@@ -22,12 +20,12 @@ class ExternalDnsChart extends base.ExternalDnsChart {
 }
 
 export class ExternalDns extends base.ExternalDns {
-    constructor(cluster: eks.Cluster, namespace: k8s.core.v1.Namespace, chartOptions: ChartOptions, opts?: ComponentResourceOptions) {
-        super(cluster.provider, namespace, chartOptions, opts);
+    constructor(provider: k8s.Provider, namespace: k8s.core.v1.Namespace, chartOptions: base.ChartOptions, opts?: ComponentResourceOptions) {
+        super(provider, namespace, chartOptions, opts);
 
-        this.chartAdapter = new ExternalDnsChart('external-dns', cluster.provider, namespace, chartOptions);
+        this.chartAdapter = new ExternalDnsChart('external-dns', provider, namespace, chartOptions);
 
-        const policy: aws.iam.PolicyDocument = {
+        const assumeRolePolicy: aws.iam.PolicyDocument = {
             Version: "2012-10-17",
             Statement: [
                 {
@@ -42,9 +40,8 @@ export class ExternalDns extends base.ExternalDns {
         };
 
         const iamRole = new aws.iam.Role('external-dns', {
-            assumeRolePolicy: policy,
-            namePrefix: `${}`
-
+            assumeRolePolicy,
+            namePrefix: `${this.chartAdapter.config().require('clusterName')}-externaldns`
         })
 
         this.registerOutputs({

@@ -4,7 +4,7 @@ import * as _ from "lodash";
 import * as k8s from "@pulumi/kubernetes";
 import * as eks from "@pulumi/eks";
 import {ComponentResourceOptions, ComponentResource} from "@pulumi/pulumi";
-import {addNamespace, installCRDs} from "../utils";
+import {addNamespace, installCRDs} from "./utils";
 
 const CRDUrls = [
     "https://raw.githubusercontent.com/coreos/prometheus-operator/master/example/prometheus-operator-crd/alertmanager.crd.yaml",

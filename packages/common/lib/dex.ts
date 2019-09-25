@@ -1,7 +1,7 @@
 import * as _ from 'lodash';
 import * as k8s from "@pulumi/kubernetes";
 import {ComponentResourceOptions, ComponentResource} from "@pulumi/pulumi";
-import {ChartAdapter, ChartOptions} from "../lib/chart-adapter";
+import {ChartAdapter, ChartOptions} from "./chart-adapter";
 
 interface Connector {
     readonly type: string

@@ -1,6 +1,6 @@
 import * as k8s from "@pulumi/kubernetes";
 import * as pulumi from "@pulumi/pulumi";
-import {ChartAdapter, ChartOptions} from "../lib/chart-adapter";
+import {ChartAdapter, ChartOptions} from "./chart-adapter";
 
 export abstract class ExternalDnsChart extends ChartAdapter {
 

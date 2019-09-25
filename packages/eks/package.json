@@ -1,11 +1,34 @@
 {
-  "name": "@k8s-ms-modules-demo/eks",
+  "name": "@k8s-ms-modules/eks",
   "version": "0.3.0",
   "description": "Managed services for AWS EKS",
-  "main": "index.ts",
-  "author": "",
+  "keywords": [],
+  "author": "Adam Tistler <atistler@datapipe.com>",
+  "license": "ISC",
+  "main": "lib/common.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/atistler/k8s-ms-modules-demo.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/atistler/k8s-ms-modules-demo/issues"
+  },
+  "homepage": "https://github.com/atistler/k8s-ms-modules-demo#readme",
   "gitHead": "0b8e43acc0dc56d6333050d3097b3bdae25918f4",
   "publishConfig": {
     "access": "public"
+  },
+  "dependencies": {
+    "@k8s-ms-modules-demo/common": "^1.0.0"
   }
 }

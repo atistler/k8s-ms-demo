@@ -1,9 +1,9 @@
 import * as _ from 'lodash';
-import * as utils from '../utils';
+import * as utils from './utils';
 import * as k8s from "@pulumi/kubernetes";
 import * as eks from "@pulumi/eks";
 import {ComponentResourceOptions, ComponentResource} from "@pulumi/pulumi";
-import {installCRDs} from "../utils";
+import {installCRDs} from "./utils";
 
 const CRDUrls = [
     "https://raw.githubusercontent.com/jetstack/cert-manager/release-0.6/deploy/manifests/00-crds.yaml"

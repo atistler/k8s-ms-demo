@@ -1,7 +1,7 @@
 import * as k8s from "@pulumi/kubernetes";
 import * as eks from "@pulumi/eks";
 import {ComponentResourceOptions, ComponentResource} from "@pulumi/pulumi";
-import {addNamespace} from "../utils";
+import {addNamespace} from "./utils";
 
 export class Harbor extends ComponentResource {
     constructor(cluster: eks.Cluster, namespace: k8s.core.v1.Namespace, values?: object, opts?: ComponentResourceOptions) {

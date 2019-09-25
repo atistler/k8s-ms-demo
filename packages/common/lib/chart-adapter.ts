@@ -1,5 +1,5 @@
 import * as _ from 'lodash';
-import * as utils from '../utils';
+import * as utils from './utils';
 import * as k8s from "@pulumi/kubernetes";
 import * as pulumi from "@pulumi/pulumi";
 import * as jsonpatch from "fast-json-patch";
