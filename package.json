@@ -1,4 +1,13 @@
 {
+  "name": "root",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "engines": {
+    "node": ">=10.15.0",
+    "yarn": ">=1.5.1"
+  },
   "devDependencies": {
     "@types/chai": "^4.2.3",
     "@types/mocha": "^5.2.7",
@@ -23,6 +32,8 @@
     "lodash": "^4.17.15"
   },
   "scripts": {
+    "bootstrap": "lerna bootstrap --use-workspaces",
+    "lerna-publish": "lerna publish",
     "commit": "npx git-cz"
   },
   "husky": {
