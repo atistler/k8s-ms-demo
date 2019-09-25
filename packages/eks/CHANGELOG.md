@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.3.0](https://github.com/atistler/k8s-ms-modules-demo/compare/@k8s-ms-modules-demo/eks@0.2.0...@k8s-ms-modules-demo/eks@0.3.0) (2019-09-25)
+
+
+### Features
+
+* **sdf:** asdf ([1e1a41c](https://github.com/atistler/k8s-ms-modules-demo/commit/1e1a41c))
+
+
+
+
+
 # [0.2.0](https://github.com/atistler/k8s-ms-modules-demo/compare/@k8s-ms-modules-demo/eks@0.1.2...@k8s-ms-modules-demo/eks@0.2.0) (2019-09-25)
 
 
