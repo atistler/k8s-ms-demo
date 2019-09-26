@@ -9,6 +9,7 @@ class ExternalDnsChart extends base.ExternalDnsChart {
     configNamespace(): string {
         return 'ManagedServices/ExternalDns/Chart'
     }
+
     defaults(): object {
         return _.merge(super.defaults(), {
             provider: 'aws',
