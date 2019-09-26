@@ -1,4 +1,0 @@
-name: k8s-ms-demo
-runtime: nodejs
-description: A minimal Kubernetes TypeScript Pulumi program
-
