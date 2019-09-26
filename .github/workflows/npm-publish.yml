@@ -15,14 +15,16 @@ jobs:
         with:
           node-version: 10.x
           registry-url: 'https://registry.npmjs.org'
-      - name: env
-        run: printenv
       - name: checkout
-        run: git checkout master && git config --local user.email "adam.tistler@rackspace.com" && git config --local user.name "Adam Tistler" && git config --local -l
+        run: git checkout master && \
+          git config --local user.email $(git log -1 --pretty=format:'%ae') && \
+          git config --local user.name "$(git log -1 --pretty=format:'%an') && \
+          git config --local credential.helper store && \
+          echo "https://${{secrets:GIT_TOKEN}}:x-oauth-basic@github.com" >> $HOME/.git-credentials && \
+          git config --local -l && \
+          cat $HOME/.git-credentials
       - name: install
-        run: yarn install
-      - name: bootstrap
-        run: yarn lerna:bootstrap
+        run: yarn install && yarn lerna:bootstrap
       - name: publish
         run: yarn lerna:publish -y
         env:
