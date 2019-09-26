@@ -16,7 +16,7 @@ jobs:
           node-version: 10.x
           registry-url: 'https://registry.npmjs.org'
       - name: checkout
-        run: git checkout master && git config --global user.email "you@example.com" && git config --global user.email "Your Name"
+        run: git checkout master && git config user.email "adam.tistler@rackspace.com" && git config user.email "Adam Tistler"
       - name: install
         run: yarn install
       - name: bootstrap
