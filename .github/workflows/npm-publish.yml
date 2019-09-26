@@ -20,6 +20,6 @@ jobs:
       - name: bootstrap
         run: yarn lerna:bootstrap
       - name: publish
-        run: git checkout master && yarn lerna:publish
+        run: git checkout master && yarn lerna:publish -y
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
