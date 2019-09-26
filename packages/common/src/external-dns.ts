@@ -7,7 +7,6 @@ export abstract class ExternalDnsChart extends ChartAdapter {
     defaultVersion(): string {
         return '2.6.1'
     };
-
     defaultChart(): string {
         return "stable/external-dns"
     };
