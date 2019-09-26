@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.5.2](https://github.com/atistler/k8s-ms-modules-demo/compare/@k8s-ms-modules-demo/eks@0.5.0...@k8s-ms-modules-demo/eks@0.5.2) (2019-09-26)
+
+
+### Bug Fixes
+
+* **tags:** sda ([8e927a6](https://github.com/atistler/k8s-ms-modules-demo/commit/8e927a6))
+* **testing:** testing ([567e803](https://github.com/atistler/k8s-ms-modules-demo/commit/567e803))
+
+
+
+
+
 # [0.5.0](https://github.com/atistler/k8s-ms-modules-demo/compare/@k8s-ms-modules-demo/eks@0.4.4...@k8s-ms-modules-demo/eks@0.5.0) (2019-09-26)
 
 
