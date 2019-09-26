@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.5.0](https://github.com/atistler/k8s-ms-modules-demo/compare/@k8s-ms-modules-demo/eks@0.4.4...@k8s-ms-modules-demo/eks@0.5.0) (2019-09-26)
+
+
+### Features
+
+* **cd:** github workflow ([2fe5977](https://github.com/atistler/k8s-ms-modules-demo/commit/2fe5977))
+
+
+
+
+
 ## [0.4.4](https://github.com/atistler/k8s-ms-modules-demo/compare/@k8s-ms-modules-demo/eks@0.4.3...@k8s-ms-modules-demo/eks@0.4.4) (2019-09-26)
 
 
