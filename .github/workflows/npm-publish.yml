@@ -21,7 +21,7 @@ jobs:
         run: yarn install
       - name: bootstrap
         run: yarn lerna:bootstrap
-      - name: publish
-        run: yarn lerna:publish -y
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+      # - name: publish
+      #  run: yarn lerna:publish -y
+      #  env:
+      #    NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
