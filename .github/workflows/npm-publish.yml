@@ -15,13 +15,15 @@ jobs:
         with:
           node-version: 10.x
           registry-url: 'https://registry.npmjs.org'
+      - name: env
+        run: printenv
       - name: checkout
-        run: git checkout master && git config --local user.email "adam.tistler@rackspace.com" && git config --local user.email "Adam Tistler" && git config --local -l
+        run: git checkout master && git config --local user.email "adam.tistler@rackspace.com" && git config --local user.name "Adam Tistler" && git config --local -l
       - name: install
         run: yarn install
       - name: bootstrap
         run: yarn lerna:bootstrap
-      # - name: publish
-      #  run: yarn lerna:publish -y
-      #  env:
-      #    NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+      - name: publish
+          run: yarn lerna:publish -y
+          env:
+            NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
