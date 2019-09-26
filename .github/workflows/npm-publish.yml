@@ -20,6 +20,6 @@ jobs:
       - name: bootstrap
         run: yarn lerna:bootstrap
       - name: publish
-        run: yarn lerna:publish
+        run: yarn lerna:publish -- --no-git-reset
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
