@@ -15,11 +15,13 @@ jobs:
         with:
           node-version: 10.x
           registry-url: 'https://registry.npmjs.org'
+      - name: checkout
+        run: git checkout master && git config --global user.email "you@example.com" && git config --global user.email "Your Name"
       - name: install
         run: yarn install
       - name: bootstrap
         run: yarn lerna:bootstrap
       - name: publish
-        run: git checkout master && yarn lerna:publish -y
+        run: yarn lerna:publish -y
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
