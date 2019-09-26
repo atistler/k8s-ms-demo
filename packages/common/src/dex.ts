@@ -41,11 +41,13 @@ export abstract class DexChart extends ChartAdapter {
     }
 
     defaults(): object {
+        const clusterDnsDomain = this.config().require('clusterDNSDomain');
+        const hostname = `dex.${clusterDnsDomain}`;
         const values = {
             image: 'quay.io/dexidp/dex',
             imageTag: 'v2.17.0',
             config: {
-                issuer: `https://dex.${this.config().require('clusterDNSDomain')}`,
+                issuer: `https://dex.${clusterDnsDomain}`,
                 storage: {
                     type: 'kubernetes',
                     config: {
@@ -59,32 +61,31 @@ export abstract class DexChart extends ChartAdapter {
             ingress: {
                 enabled: true,
                 path: '/',
-                hosts: [`dex.${this.config().require('clusterDNSDomain')}`],
+                hosts: [hostname],
                 annotations: {
                     'nginx.ingress.kubernetes.io/rewrite-target': '/',
                     'nginx.ingress.kubernetes.io/ssl-redirect': 'true',
-                    'external-dns.alpha.kubernetes.io/hostname': `dex.${this.config().require('clusterDNSDomain')}`
+                    'external-dns.alpha.kubernetes.io/hostname': hostname
                 },
                 tls: {
-                    hosts: [`dex.${this.config().require('clusterDNSDomain')}`],
+                    hosts: [hostname],
                     secretName: 'cert-wildcard'
                 }
             }
         };
         if (_.isEmpty(this.config().getObject('connectors'))) {
+            values.config.connectors = (this.config().requireObject('connectors') as any).data
+        }
+        if (_.isEmpty(this.config().getObject('staticPasswords'))) {
             values.config.enablePasswordDB = true;
-            // @ts-ignore
-            values.config.staticPasswords = this.config().requireObject('staticPasswords');
-        } else {
-            // @ts-ignore
-            values.config.connectors = this.config().requireObject('connectors')
+            values.config.staticPasswords = (this.config().requireObject('staticPasswords') as any).data;
         }
         return values;
     };
 }
 
 export class Dex extends ComponentResource {
-    constructor(provider: k8s.Provider, namespace: k8s.core.v1.Namespace, chartOptions: ChartOptions, opts?: ComponentResourceOptions) {
+    constructor(provider: k8s.Provider, namespace: k8s.core.v1.Namespace, chartOptions?: ChartOptions, opts?: ComponentResourceOptions) {
         super('managed-services', 'dex', {}, opts);
     }
 }

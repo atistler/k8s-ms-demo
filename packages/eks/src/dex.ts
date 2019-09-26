@@ -16,7 +16,7 @@ class DexChart extends base.DexChart {
 export class Dex extends base.Dex {
     readonly chartAdapter: DexChart;
 
-    constructor(provider: k8s.Provider, namespace: k8s.core.v1.Namespace, chartOptions: base.ChartOptions, opts?: ComponentResourceOptions) {
+    constructor(provider: k8s.Provider, namespace: k8s.core.v1.Namespace, chartOptions?: base.ChartOptions, opts?: ComponentResourceOptions) {
         super(provider, namespace, chartOptions, opts);
         this.chartAdapter = new DexChart('dex', provider, namespace, chartOptions);
     }

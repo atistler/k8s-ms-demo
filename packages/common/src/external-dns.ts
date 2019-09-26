@@ -40,7 +40,7 @@ export abstract class ExternalDnsChart extends ChartAdapter {
 export class ExternalDns extends pulumi.ComponentResource {
     chartAdapter: ExternalDnsChart;
 
-    constructor(provider: k8s.Provider, namespace: k8s.core.v1.Namespace, chartOptions: ChartOptions, opts?: pulumi.ComponentResourceOptions) {
+    constructor(provider: k8s.Provider, namespace: k8s.core.v1.Namespace, chartOptions?: ChartOptions, opts?: pulumi.ComponentResourceOptions) {
         super('managed-services', 'external-dns', {}, opts);
     }
 }

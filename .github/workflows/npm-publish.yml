@@ -1,0 +1,22 @@
+name: NPM Publish
+# This workflow is triggered on pushes to the master branch.
+on: [push]
+branches:
+  - master
+
+jobs:
+  publish:
+    name: Publish
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 10.x
+          registry-url: 'https://registry.npmjs.org'
+      - name: bootstrap
+        run: yarn lerna:bootstrap
+      - name: publish
+        run: yarn lerna:publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

@@ -20,7 +20,7 @@ class ExternalDnsChart extends base.ExternalDnsChart {
 }
 
 export class ExternalDns extends base.ExternalDns {
-    constructor(provider: k8s.Provider, namespace: k8s.core.v1.Namespace, chartOptions: base.ChartOptions, opts?: ComponentResourceOptions) {
+    constructor(provider: k8s.Provider, namespace: k8s.core.v1.Namespace, chartOptions?: base.ChartOptions, opts?: ComponentResourceOptions) {
         super(provider, namespace, chartOptions, opts);
 
         this.chartAdapter = new ExternalDnsChart('external-dns', provider, namespace, chartOptions);
