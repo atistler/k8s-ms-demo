@@ -1,6 +1,6 @@
 {
   "name": "@k8s-ms-modules-demo/eks",
-  "version": "0.5.0",
+  "version": "0.5.1",
   "description": "Managed services for AWS EKS",
   "keywords": [],
   "author": "Adam Tistler <adam.tistler@rackspace.com>",
