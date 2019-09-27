@@ -15,16 +15,16 @@ jobs:
         with:
           node-version: 10.x
           registry-url: 'https://registry.npmjs.org'
-      - name: configure
+      - name: Configure Git
         run: |
           git checkout $(echo $GITHUB_REF | sed 's/refs\/heads\///') \
             && git config --local user.email "$(git log -1 --pretty=format:'%ae')" \
             && git config --local user.name "$(git log -1 --pretty=format:'%an')" \
             && git config --local credential.helper store \
             && echo "https://${{secrets.GIT_TOKEN}}:x-oauth-basic@github.com" >> "$HOME/.git-credentials"
-      - name: install
+      - name: Install Dependencies
         run: yarn install && yarn lerna:bootstrap
-      - name: publish
+      - name: Release
         run: yarn lerna:publish -y
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
