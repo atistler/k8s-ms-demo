@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.3](https://github.com/atistler/k8s-ms-modules-demo/compare/@k8s-ms-modules-demo/common@1.1.2...@k8s-ms-modules-demo/common@1.1.3) (2019-09-27)
+
+
+### Bug Fixes
+
+* **chart:** default options ([7abbd68](https://github.com/atistler/k8s-ms-modules-demo/commit/7abbd68))
+
+
+
+
+
 ## [1.1.2](https://github.com/atistler/k8s-ms-modules-demo/compare/@k8s-ms-modules-demo/common@1.1.0...@k8s-ms-modules-demo/common@1.1.2) (2019-09-26)
 
 
