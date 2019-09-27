@@ -1,6 +1,6 @@
 {
   "name": "@k8s-ms-modules-demo/eks",
-  "version": "0.5.3",
+  "version": "0.5.4",
   "description": "Managed services for AWS EKS",
   "keywords": [],
   "author": "Adam Tistler <adam.tistler@rackspace.com>",
@@ -30,7 +30,7 @@
     "access": "public"
   },
   "dependencies": {
-    "@k8s-ms-modules-demo/common": "^1.1.3",
+    "@k8s-ms-modules-demo/common": "^1.1.4",
     "@pulumi/awsx": "^0.18.10",
     "@pulumi/eks": "^0.18.13",
     "@pulumi/kubernetes": "^1.0.0",
