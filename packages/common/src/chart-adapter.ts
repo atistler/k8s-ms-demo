@@ -13,7 +13,7 @@ export interface ChartOptions {
 export abstract class ChartAdapter {
     readonly chart: k8s.helm.v2.Chart;
 
-    constructor(releaseName: string, provider: k8s.Provider, namespace: k8s.core.v1.Namespace, chartOptions: ChartOptions) {
+    constructor(releaseName: string, provider: k8s.Provider, namespace: k8s.core.v1.Namespace, chartOptions: ChartOptions = {}) {
         const namespaceName = namespace.metadata.name;
         this.chart = new k8s.helm.v2.Chart(releaseName, {
             chart: chartOptions.chart || this.defaultChart(),
